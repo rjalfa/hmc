@@ -1,0 +1,49 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@font-face {
+    font-family: "Harlow Solid Italic";
+    src: url(/assets/Harlow_solid.otf) format("truetype");
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 2.2em;
+  color: white;
+  font-family: "Harlow Solid Italic";
+  /*letter-spacing: -1px;*/
+  padding-top: 4px;
+  /*font-weight: bold;*/
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid gray;
+  color: gray;
+}
+
+
+.about-1 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url("about-abs.jpg") no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#about-para {
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #202020;
+	font-size: 20px;
+	text-align: center;	
+}
+	
