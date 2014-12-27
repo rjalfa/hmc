@@ -35,19 +35,20 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
-
-  <div class="actions">
-    <%= f.submit "Update",class: "btn btn-primary" %>
-  </div>
-<% end %>
-Change Gravatar
-<div class="gravatar_edit">
+  <div class="gravatar_edit">
       <%= gravatar_for @user %>
       <a href="http://gravatar.com/emails" target=_blank>change</a>
     </div>
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
+
+  <div class="actions">
+    <%= f.submit "Update",class: "btn btn-primary" %>
+  </div>
+<% end %>
 <hr>
 <h3>Delete account</h3>
 
