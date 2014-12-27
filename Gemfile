@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
-
+#for image upload
+gem 'carrierwave',             '0.10.0'
+gem 'mini_magick',             '3.8.0'
+gem 'fog',                     '1.23.0'
+#For Pagination
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 #Records of Semi-realistic User records
 gem 'faker','1.4.2'
 #Bootstrap with SASS CSS for Rails
@@ -16,6 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+gem 'devise-i18n'
 #Devise, The ultimate User-Authentication Solution
 gem 'devise'
 # Use jquery as the JavaScript library

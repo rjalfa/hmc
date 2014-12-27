@@ -1,10 +1,35 @@
 <div class="center jumbotron" style="text-align:center;">
+  <% if !user_signed_in? %>
   <h1>Hi! There</h1>
   <h2>
   What do you want to choose today?
   </h2>
-  <% if !user_signed_in? %>
   <%= link_to "Sign up",new_registration_path(:user), class: "btn btn-lg btn-primary" %>
   <%= link_to "Log In",new_session_path(:user), class: "btn btn-lg btn-primary" %>
+  </div>
+  <% else %>
+  	<% if current_user.sign_in_count==1 %>
+		<h1>Hi <%= current_user.name %>, Welcome to HMC!</h1>
+	<% else %>
+		<h1>Welcome Back!</h1>
+	<% end %>
+	</div>
   <% end %>
+<div class="container">
+<h1> Recent Posts </h1>
+ <ol class="microposts">
+ <% @posts.each do |post| %>
+ 	<li id="post-<%= post.id %>">
+  	<%= link_to gravatar_for(post.user, size: 50), post.user %>
+  	<span class="user"><%= link_to post.user.name, post.user %></span>
+  	<span class="content"><%= post.content %></span>
+  	<span class="timestamp">
+   	 Posted <%= time_ago_in_words(post.created_at) %> ago.
+   	 <% if current_user==post.user %>
+    	  <%= link_to "delete", post, method: :delete,data: { confirm: "You sure?" } %>
+    <% end %>
+  </span>
+</li>
+ <% end %>
+</ol>
 </div>
