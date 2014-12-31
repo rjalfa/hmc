@@ -5,13 +5,10 @@
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
-      <%= form_for(@post) do |f| %>
-  <div class="field">
-    <%= f.text_area :content, placeholder: "Compose new post..." %>
-  </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
-<% end %>
-
+      <br/>
+      <br/>
+      <br/>
+      <%= link_to "New Post", new_post_path, class: "btn btn-md btn-primary" %>
 </aside>
 <div class="col-md-9">
 <% if @user.posts.any? %>

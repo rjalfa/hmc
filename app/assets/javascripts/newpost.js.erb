@@ -1,0 +1,11 @@
+$(document).ready(function(){
+    $('#new-post-button').addClass('disabled');
+    $('#new-post-text').keyup(function(){
+        if (this.value!="") {
+        	$('#new-post-button').removeClass('disabled');
+        } 
+        else{
+        	$('#new-post-button').addClass('disabled');
+        };     
+    });
+}); 
