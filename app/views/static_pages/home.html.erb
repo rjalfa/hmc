@@ -12,6 +12,7 @@
 		<h1>Hi <%= current_user.name %>, Welcome to HMC!</h1>
 	<% else %>
 		<h1>Welcome Back!</h1>
+    <%= link_to "Create new Post",new_post_path(:user), class: "btn btn-lg btn-primary" %>
 	<% end %>
 	</div>
   <% end %>

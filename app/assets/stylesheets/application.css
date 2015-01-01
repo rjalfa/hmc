@@ -14,6 +14,8 @@
  *= require_self
  */
 
+@font-face { font-family: 'Harlow Solid Italic'; src: url('harlow_solid_italic.eot'); src: url('harlow_solid_italic.eot?#iefix') format('embedded-opentype'), url('harlow_solid_italic.svg#Harlow Solid Italic') format('svg'), url('harlow_solid_italic.woff') format('woff'), url('harlow_solid_italic.ttf') format('truetype'); font-weight: normal; font-style: normal;}
+
 hr {
   -moz-border-bottom-colors: none;
   -moz-border-image: none;
@@ -114,3 +116,18 @@ input {
     color: #468847;
     text-align: left;
  }
+
+ #logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 2.2em;
+  color: white;
+  font-family: "Harlow Solid Italic";
+  /*letter-spacing: -1px;*/
+  padding-top: 4px;
+  /*font-weight: bold;*/
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
