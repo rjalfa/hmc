@@ -19,6 +19,7 @@ before_action :correct_user,   only: :destroy
 
   def new
     @post = Post.new(params[:post])
+    bno = 2
   end
 
   private
