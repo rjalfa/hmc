@@ -19,6 +19,11 @@ before_action :correct_user,   only: :destroy
 
   def new
     @post = Post.new(params[:post])
+    @blocks = Array.new
+    @blk = Block.new
+    2.times do
+      @blocks.push @blk
+    end
   end
 
   private
