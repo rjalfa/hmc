@@ -19,7 +19,11 @@ before_action :correct_user,   only: :destroy
 
   def new
     @post = Post.new(params[:post])
+<<<<<<< HEAD
     bno = 2
+=======
+    
+>>>>>>> post-blocks
   end
 
   private

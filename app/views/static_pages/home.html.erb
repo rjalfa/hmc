@@ -11,8 +11,13 @@
   	<% if current_user.sign_in_count==1 %>
 		<h1>Hi <%= current_user.name %>, Welcome to HMC!</h1>
 	<% else %>
+<<<<<<< HEAD
 		<h1>Welcome Back!</h1>
     <%= link_to "Create new Post",new_post_path(:user), class: "btn btn-lg btn-primary" %>
+=======
+		<h1>Welcome Back!</h1><br/>
+    <%= link_to "New Post", new_post_path, class: "btn btn-lg btn-primary" %>
+>>>>>>> post-blocks
 	<% end %>
 	</div>
   <% end %>
