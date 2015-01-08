@@ -18,7 +18,11 @@ before_action :correct_user,   only: :destroy
   end
 
   def new
-    @post = Post.new(params[:post])
+    @post = current_user.posts.create!(content: "ANONYMOUS")
+    @blocks = @post.blocks
+    4.times do
+      @post.blocks.create!
+    end
   end
 
   private

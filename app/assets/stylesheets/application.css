@@ -117,17 +117,3 @@ input {
     text-align: left;
  }
 
- #logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 2.2em;
-  color: white;
-  font-family: "Harlow Solid Italic";
-  /*letter-spacing: -1px;*/
-  padding-top: 4px;
-  /*font-weight: bold;*/
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
-}

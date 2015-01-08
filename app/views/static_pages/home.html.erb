@@ -17,9 +17,10 @@
 	</div>
   <% end %>
 <div class="container">
-<h1> Recent Posts </h1>
- <ol class="microposts">
- <% @posts.each do |post| %>
+<% if @posts.count != 0 %>
+  <h1> Recent Posts </h1>
+  <ol class="microposts">
+  <% @posts.each do |post| %>
  	<li id="post-<%= post.id %>">
   	<%= link_to gravatar_for(post.user, size: 50), post.user %>
   	<span class="user"><%= link_to post.user.name, post.user %></span>
@@ -33,4 +34,7 @@
 </li>
  <% end %>
 </ol>
+<% else %>
+  <h3 style="color:#A0A0A0;">No Posts created</h3>
+<% end %>
 </div>

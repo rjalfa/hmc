@@ -1,8 +1,12 @@
 class BlocksController < ApplicationController
 
   def create
-
+  	
   end
-	
-  def   
+
+  private
+
+  	def block_params
+      params.require(:block).permit(:content)
+    end   
 end
