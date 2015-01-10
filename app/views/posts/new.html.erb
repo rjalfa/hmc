@@ -1,19 +1,7 @@
 <% provide(:title, "New Post") %>
 <div class="container">
 	<h1> Create new post </h1>
-<<<<<<< HEAD
 </div>
-<div class="container">
-	<% @blocks.each do | block | %>
-	  <ul class="list-group col-lg-3">
-	  <div class="entity">
-	  <h1 align="center"> Block </h1>
-	  <div class="field">
-    </div>
-	  </div>
-	  </ul>
-=======
-</div> 
 <div class="container">
 	<%= form_for @post do |f| %>
 	<%= f.text_field :content ,placeholder: "Enter Poll Name"%>  
@@ -31,6 +19,5 @@
 	<br/>
 	<br/>
 	<%= f.submit "Create Post" ,class: "btn btn-primary btn-lg"%>
->>>>>>> post-blocks
 	<% end %>
 </div>
