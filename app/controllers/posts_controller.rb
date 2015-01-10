@@ -19,12 +19,13 @@ before_action :correct_user,   only: :destroy
 
   def new
     @post = Post.new(params[:post])
-    
+    5.times { @post.blocks.build }
+    @blno = 5;
   end
 
   private
   	def post_params
-      params.require(:post).permit(:content)
+      params.require(:post).permit(:content,:blocks)
     end
 
     def correct_user

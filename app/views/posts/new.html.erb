@@ -1,6 +1,23 @@
 <% provide(:title, "New Post") %>
-<div class="row">
-<div class="col-md-6 col-md-offset-3">
-	<%= render 'posts/postbox' %>
-</div>
+<div class="container">
+	<h1> Create new post </h1>
+</div> 
+<div class="container">
+	<%= form_for @post do |f| %>
+	<%= f.text_field :content ,placeholder: "Enter Poll Name"%>  
+	<div class="box-group">
+	<%= f.fields_for :blocks do |builder| %>
+	  <div class="box">
+		  <h1 align="center"> Block </h1>
+		  <%= builder.label :title, "Comparator"%>
+		  <%= builder.text_field :title %>
+		  <%= builder.hidden_field :_destroy %>
+		  <%= link_to "remove","#",onclick: "remove_block(this)",class: "btn btn-sm btn-danger"%>
+	  </div>
+	<% end %>
+	</div>
+	<br/>
+	<br/>
+	<%= f.submit "Create Post" ,class: "btn btn-primary btn-lg"%>
+	<% end %>
 </div>
