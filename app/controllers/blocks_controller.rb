@@ -1,4 +1,5 @@
 class BlocksController < ApplicationController
+<<<<<<< HEAD
 
   def create
   	
@@ -10,3 +11,11 @@ class BlocksController < ApplicationController
       params.require(:block).permit(:content)
     end   
 end
+=======
+  def destroy
+  	if @block.comments
+  		@block.comments.destroy
+  	@block.destroy
+  end
+end
+>>>>>>> post-blocks

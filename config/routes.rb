@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'blocks/destroy'
+
   get 'posts/new'
 
   get 'users/show'

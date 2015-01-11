@@ -11,7 +11,7 @@ before_action :correct_user,   only: :destroy
   end
 
   def destroy
-  	@post.destroy
+    @post.destroy
     flash[:success] = "Post deleted"
     redirect_to request.referrer || root_url
   end
