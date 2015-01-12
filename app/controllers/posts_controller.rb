@@ -2,9 +2,9 @@ class PostsController < ApplicationController
 before_action :logged_in_user, only: [:create, :destroy, :new]
 before_action :correct_user,   only: :destroy
   def create
-    if current_user.posts.create(post_params)
+    if @post = current_user.posts.create(post_params)
       flash[:success] = "Post created!"
-      redirect_to user_path(current_user)
+      redirect_to post_path(@post)
     else
       render 'static_pages/home'
   	end
@@ -20,6 +20,10 @@ before_action :correct_user,   only: :destroy
     @post = Post.new(params[:post])
     5.times { @post.blocks.build }
     @blno = 5;
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   private

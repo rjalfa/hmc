@@ -1,0 +1,12 @@
+<% provide(:title, "Post") %>
+<div class="container">
+	<h1> <%= @post.content %> </h1>
+</div>
+<div class="container">
+	<% @post.blocks.each do |block| %>
+	  <div class="box">
+		  <h1 align="center"> <%= block.title %> </h1>
+		  <%= commontator_thread(block) %>
+	  </div>
+	<% end %>
+</div>

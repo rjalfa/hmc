@@ -5,4 +5,5 @@ class BlocksController < ApplicationController
   		@block.comments.delete_all
   	@block.destroy
   end
+  
 end

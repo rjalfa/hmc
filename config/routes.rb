@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'help' => 'static_pages#help'
   root to: "static_pages#home"
   get '/users/:id', :to => 'users#show', :as => :user
+  get '/posts/:id', :to => 'posts#show', :as => :post
   resources :posts, only: [:create, :destroy, :new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

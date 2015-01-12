@@ -41,6 +41,9 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+#comment system
+gem 'commontator', '~> 4.10.0'
+gem 'acts_as_votable'
 # Use unicorn as the app server
 # gem 'unicorn'
 
